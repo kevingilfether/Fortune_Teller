@@ -87,7 +87,7 @@ namespace Fortune_Teller
             }
             else if (numSibs > 3)
             {
-                vacationHome = "Sting's house, wherever that is";
+                vacationHome = "Sting's house, wherever that is,";
             }
             else
             {
@@ -157,8 +157,10 @@ namespace Fortune_Teller
             else
             {
                 moneyBank = 0.00;
-            }                                
-                                    
+            }
+
+            //Writes fortune                           
+            Console.WriteLine("{0} {1} will retire in {2} years with ${3} in the bank, a vacation home in {4} and {5}.", firstName, lastName, yearsToRetire, moneyBank, vacationHome, transit);                 
 
 
         }
