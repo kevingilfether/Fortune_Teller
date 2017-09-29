@@ -12,8 +12,39 @@ namespace Fortune_Teller
         {
 
             //https://www.youtube.com/watch?v=tnCCg3U0tHA
+            // Part 1, initializes variables, prompts user and 
 
+            bool quitFlag = false;
+            string firstName;
+            string lastName;
+            int age;
+            int birthMonth;
+            string favoriteColor;
+            int numSibs;
+
+            Console.WriteLine("I'm a fortune teller, of sorts.");
+            Console.WriteLine("What's your first name?");
+            firstName = Console.ReadLine().Trim();
+            
+            Console.WriteLine("Good, good. What's your last name?");
+            lastName = Console.ReadLine().Trim();
+
+            Console.WriteLine("Interesting! What is your age?");
+            age = int.Parse(Console.ReadLine().Trim());
+
+            Console.WriteLine("You don't say! Say, what's your birth month, by number?");
+            Console.WriteLine("(Like, \"1\" for \"January,\" and so on.)");
+            birthMonth = int.Parse(Console.ReadLine().Trim());
+
+            Console.WriteLine("What is your favorite ROYGBIV color?");
+            Console.WriteLine("I can help if you type \"help\".");
+            favoriteColor = Console.ReadLine().Trim();
+
+            Console.WriteLine("Phew, that's a lot! One last one: how many siblings do you have?");
+            numSibs = int.Parse(Console.ReadLine());
 
         }
+
     }
 }
+
