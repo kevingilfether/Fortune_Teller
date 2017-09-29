@@ -136,7 +136,28 @@ namespace Fortune_Teller
                 transit = "some beat up old Chuck Taylor All Stars";
             }
 
-                      
+            // Uses birth month to assign $ in the bank
+            double moneyBank;
+
+            if (birthMonth >= 1 && birthMonth < 5)
+            {
+                moneyBank = 100000.00;
+            }
+            
+            else if (birthMonth >= 5 && birthMonth < 9)
+            {
+                moneyBank = 200000.00;
+            }
+
+            else if (birthMonth >= 9 && birthMonth < 13)
+            {
+                moneyBank = 300000.00;
+            }
+
+            else
+            {
+                moneyBank = 0.00;
+            }                                
                                     
 
 
