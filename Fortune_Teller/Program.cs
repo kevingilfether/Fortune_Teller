@@ -14,31 +14,66 @@ namespace Fortune_Teller
             //https://www.youtube.com/watch?v=tnCCg3U0tHA
             // Part 1, initializes variables, prompts user and assigns. 
 
-            bool quitFlag = false;
             string firstName;
             string lastName;
-            int age;
-            int birthMonth;
+            string age;
+            int iAge = 0;
+            string birthMonth;
+            int iBirthMonth = 0;
             string favoriteColor;
-            int numSibs;
+            string numSibs;
+            int iNumSibs = 0;
 
             Console.WriteLine("I'm a fortune teller, of sorts.");
             Console.WriteLine("What's your first name?");
             firstName = Console.ReadLine().Trim();
+            if (firstName.ToLower() == "quit")
+            {
+                Console.WriteLine("No one likes a quitter...");
+                Environment.Exit(0);
+            }
 
             Console.WriteLine("Good, good. What's your last name?");
             lastName = Console.ReadLine().Trim();
+            if (lastName.ToLower() == "quit")
+            {
+                Console.WriteLine("No one likes a quitter...");
+                Environment.Exit(0);
+            }
 
             Console.WriteLine("Interesting! What is your age?");
-            age = int.Parse(Console.ReadLine().Trim());
+            age = Console.ReadLine().Trim();
+            if (age.ToLower() == "quit")
+            {
+                Console.WriteLine("No one likes a quitter...");
+                Environment.Exit(0);
+            }
+            else
+            {
+                iAge = int.Parse(age);
+            }
 
             Console.WriteLine("You don't say! Say, what's your birth month, by number?");
             Console.WriteLine("(Like, \"1\" for \"January,\" and so on.)");
-            birthMonth = int.Parse(Console.ReadLine().Trim());
+            birthMonth = (Console.ReadLine().Trim());
+            if (birthMonth.ToLower() == "quit")
+            {
+                Console.WriteLine("No one likes a quitter...");
+                Environment.Exit(0);
+            }
+            else
+            {
+                iBirthMonth = int.Parse(birthMonth);
+            }
 
             Console.WriteLine("What is your favorite ROYGBIV color?");
             Console.WriteLine("I can help if you type \"help\".");
             favoriteColor = Console.ReadLine().ToLower().Trim();
+            if (favoriteColor == "quit")
+            {
+                Console.WriteLine("No one likes a quitter...");
+                Environment.Exit(0);
+            }
             if (favoriteColor == "help")
             {
                 //ROYGBIV Help Console and extra prompt
@@ -51,15 +86,29 @@ namespace Fortune_Teller
                 Console.WriteLine("V = Violet");
                 Console.WriteLine("What is your favorite ROYGBIV color?");
                 favoriteColor = Console.ReadLine().ToLower().Trim();
+                if (favoriteColor == "quit")
+                {
+                    Console.WriteLine("No one likes a quitter...");
+                    Environment.Exit(0);
+                }
             }
 
             Console.WriteLine("Phew, that's a lot! One last one: how many siblings do you have?");
-            numSibs = int.Parse(Console.ReadLine());
+            numSibs = (Console.ReadLine());
+            if (numSibs.ToLower() == "quit")
+            {
+                Console.WriteLine("No one likes a quitter...");
+                Environment.Exit(0);
+            }
+            else
+            {
+                iNumSibs = int.Parse(numSibs);
+            }
 
 
             //Years to retirement assignment
             int yearsToRetire;
-            if (age % 2 == 0)
+            if (iAge % 2 == 0)
             {
                 yearsToRetire = 14;
             }
@@ -70,23 +119,23 @@ namespace Fortune_Teller
 
             //Vacation home assignment
             string vacationHome;
-            if (numSibs == 0)
+            if (iNumSibs == 0)
             {
                 vacationHome = "nowhere special, just Cabo San Lucas";
             }
-            else if (numSibs == 1)
+            else if (iNumSibs == 1)
             {
-                vacationHome = "in an underlake palace in Lake Erie";
+                vacationHome = "in a Lake Erie undersea palace";
             }
-            else if (numSibs == 2)
+            else if (iNumSibs == 2)
             {
                 vacationHome = "on scenic the Moon";
             }
-            else if (numSibs == 3)
+            else if (iNumSibs == 3)
             {
                 vacationHome = "of a really big bouncy house";
             }
-            else if (numSibs > 3)
+            else if (iNumSibs > 3)
             {
                 vacationHome = "near Sting's house, wherever that is,";
             }
@@ -104,7 +153,7 @@ namespace Fortune_Teller
 
             else if (favoriteColor == "o" || favoriteColor == "orange")
             {
-                transit = "a Caddy";
+                transit = "a sweet Caddy";
             }
 
             else if (favoriteColor == "y" || favoriteColor == "yellow")
@@ -140,17 +189,17 @@ namespace Fortune_Teller
             // Uses birth month to assign $ in the bank
             double moneyBank;
 
-            if (birthMonth >= 1 && birthMonth < 5)
+            if (iBirthMonth >= 1 && iBirthMonth < 5)
             {
                 moneyBank = 100000.00;
             }
 
-            else if (birthMonth >= 5 && birthMonth < 9)
+            else if (iBirthMonth >= 5 && iBirthMonth < 9)
             {
                 moneyBank = 200000.00;
             }
 
-            else if (birthMonth >= 9 && birthMonth < 13)
+            else if (iBirthMonth >= 9 && iBirthMonth < 13)
             {
                 moneyBank = 300000.00;
             }
