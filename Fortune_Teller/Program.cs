@@ -12,7 +12,7 @@ namespace Fortune_Teller
         {
 
             //https://www.youtube.com/watch?v=tnCCg3U0tHA
-            // Part 1, initializes variables, prompts user and 
+            // Part 1, initializes variables, prompts user and assigns. 
 
             bool quitFlag = false;
             string firstName;
@@ -21,7 +21,6 @@ namespace Fortune_Teller
             int birthMonth;
             string favoriteColor;
             int numSibs;
-
 
             Console.WriteLine("I'm a fortune teller, of sorts.");
             Console.WriteLine("What's your first name?");
@@ -57,6 +56,7 @@ namespace Fortune_Teller
             Console.WriteLine("Phew, that's a lot! One last one: how many siblings do you have?");
             numSibs = int.Parse(Console.ReadLine());
 
+
             //Years to retirement assignment
             int yearsToRetire;
             if (age % 2 == 0)
@@ -76,23 +76,23 @@ namespace Fortune_Teller
             }
             else if (numSibs == 1)
             {
-                vacationHome = "underlake palace in Lake Erie";
+                vacationHome = "in an underlake palace in Lake Erie";
             }
             else if (numSibs == 2)
             {
-                vacationHome = "scenic the Moon";
+                vacationHome = "on scenic the Moon";
             }
             else if (numSibs == 3)
             {
-                vacationHome = "a really big bouncy house";
+                vacationHome = "of a really big bouncy house";
             }
             else if (numSibs > 3)
             {
-                vacationHome = "Sting's house, wherever that is,";
+                vacationHome = "near Sting's house, wherever that is,";
             }
             else
             {
-                vacationHome = "a rapidly melting arctic glacier";
+                vacationHome = "on a rapidly melting arctic glacier";
             }
 
             //Assigns mode of transportation based on ROYGBIV preference
@@ -131,7 +131,7 @@ namespace Fortune_Teller
             {
                 transit = "Chuck D's Oldsmobile 88";
             }
-            
+
             else
             {
                 transit = "some beat up old Chuck Taylor All Stars";
@@ -144,7 +144,7 @@ namespace Fortune_Teller
             {
                 moneyBank = 100000.00;
             }
-            
+
             else if (birthMonth >= 5 && birthMonth < 9)
             {
                 moneyBank = 200000.00;
@@ -161,7 +161,7 @@ namespace Fortune_Teller
             }
 
             //Writes fortune                           
-            Console.WriteLine("{0} {1} will retire in {2} years with ${3} in the bank, a vacation home in {4} and {5}.", firstName, lastName, yearsToRetire, moneyBank, vacationHome, transit);                 
+            Console.WriteLine("{0} {1} will retire in {2} years with ${3} in the bank, \na vacation home {4} and {5}.", firstName, lastName, yearsToRetire, moneyBank, vacationHome, transit);
 
 
         }
