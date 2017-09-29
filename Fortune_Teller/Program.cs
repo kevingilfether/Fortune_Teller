@@ -25,7 +25,7 @@ namespace Fortune_Teller
             Console.WriteLine("I'm a fortune teller, of sorts.");
             Console.WriteLine("What's your first name?");
             firstName = Console.ReadLine().Trim();
-            
+
             Console.WriteLine("Good, good. What's your last name?");
             lastName = Console.ReadLine().Trim();
 
@@ -38,8 +38,8 @@ namespace Fortune_Teller
 
             Console.WriteLine("What is your favorite ROYGBIV color?");
             Console.WriteLine("I can help if you type \"help\".");
-            favoriteColor = Console.ReadLine().Trim();
-            if (favoriteColor.ToLower() == "help")
+            favoriteColor = Console.ReadLine().ToLower().Trim();
+            if (favoriteColor == "help")
             {
                 //ROYGBIV Help Console and extra prompt
                 Console.WriteLine("R = Red");
@@ -50,7 +50,7 @@ namespace Fortune_Teller
                 Console.WriteLine("I = Indigo");
                 Console.WriteLine("V = Violet");
                 Console.WriteLine("What is your favorite ROYGBIV color?");
-                favoriteColor = Console.ReadLine().Trim();
+                favoriteColor = Console.ReadLine().ToLower().Trim();
             }
 
             Console.WriteLine("Phew, that's a lot! One last one: how many siblings do you have?");
@@ -66,11 +66,8 @@ namespace Fortune_Teller
             {
                 yearsToRetire = 2147483647;
             }
-            Console.WriteLine(yearsToRetire);
-
 
             //Vacation home assignment
-
             string vacationHome;
             if (numSibs == 0)
             {
@@ -96,14 +93,51 @@ namespace Fortune_Teller
             {
                 vacationHome = "a rapidly melting arctic glacier";
             }
-                    
-                    
 
-                
+            //Assigns mode of transportation based on ROYGBIV preference
+            string transit;
+            if (favoriteColor == "r" || favoriteColor == "red")
+            {
+                transit = "rocket boots";
+            }
 
+            else if (favoriteColor == "o" || favoriteColor == "orange")
+            {
+                transit = "a Caddy";
+            }
 
+            else if (favoriteColor == "y" || favoriteColor == "yellow")
+            {
+                transit = "some European luxury car";
+            }
 
+            else if (favoriteColor == "g" || favoriteColor == "green")
+            {
+                transit = "a hanglider";
+            }
+
+            else if (favoriteColor == "b" || favoriteColor == "blue")
+            {
+                transit = "a flock of cats conveying you like some baron";
+            }
+
+            else if (favoriteColor == "i" || favoriteColor == "indigo")
+            {
+                transit = "Santa's sleigh";
+            }
+
+            else if (favoriteColor == "v" || favoriteColor == "violet")
+            {
+                transit = "Chuck D's Oldsmobile 88";
+            }
             
+            else
+            {
+                transit = "some beat up old Chuck Taylor All Stars";
+            }
+
+                      
+                                    
 
 
         }
