@@ -68,13 +68,47 @@ namespace Fortune_Teller
             }
             Console.WriteLine(yearsToRetire);
 
-            //Vacation home assignment
-            
 
+            //Vacation home assignment
+
+            string vacationHome;
+            if (numSibs == 0)
+            {
+                vacationHome = "nowhere special, just Cabo San Lucas";
+            }
+            else if (numSibs == 1)
+            {
+                vacationHome = "underlake palace in Lake Erie";
+            }
+            else if (numSibs == 2)
+            {
+                vacationHome = "scenic the Moon";
+            }
+            else if (numSibs == 3)
+            {
+                vacationHome = "a really big bouncy house";
+            }
+            else if (numSibs > 3)
+            {
+                vacationHome = "Sting's house, wherever that is";
+            }
+            else
+            {
+                vacationHome = "a rapidly melting arctic glacier";
+            }
+                    
+                    
+
+                
+
+
+
+            
 
 
         }
 
     }
+
 }
 
