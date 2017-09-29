@@ -41,6 +41,7 @@ namespace Fortune_Teller
             favoriteColor = Console.ReadLine().Trim();
             if (favoriteColor.ToLower() == "help")
             {
+                //ROYGBIV Help Console and extra prompt
                 Console.WriteLine("R = Red");
                 Console.WriteLine("O = Orange");
                 Console.WriteLine("Y = Yellow");
@@ -54,6 +55,23 @@ namespace Fortune_Teller
 
             Console.WriteLine("Phew, that's a lot! One last one: how many siblings do you have?");
             numSibs = int.Parse(Console.ReadLine());
+
+            //Years to retirement assignment
+            int yearsToRetire;
+            if (age % 2 == 0)
+            {
+                yearsToRetire = 14;
+            }
+            else
+            {
+                yearsToRetire = 2147483647;
+            }
+            Console.WriteLine(yearsToRetire);
+
+            //Vacation home assignment
+            
+
+
 
         }
 
