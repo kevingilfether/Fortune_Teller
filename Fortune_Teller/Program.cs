@@ -39,6 +39,18 @@ namespace Fortune_Teller
             Console.WriteLine("What is your favorite ROYGBIV color?");
             Console.WriteLine("I can help if you type \"help\".");
             favoriteColor = Console.ReadLine().Trim();
+            if (favoriteColor.ToLower() == "help")
+            {
+                Console.WriteLine("R = Red");
+                Console.WriteLine("O = Orange");
+                Console.WriteLine("Y = Yellow");
+                Console.WriteLine("G = Green");
+                Console.WriteLine("B = Blue");
+                Console.WriteLine("I = Indigo");
+                Console.WriteLine("V = Violet");
+                Console.WriteLine("What is your favorite ROYGBIV color?");
+                favoriteColor = Console.ReadLine().Trim();
+            }
 
             Console.WriteLine("Phew, that's a lot! One last one: how many siblings do you have?");
             numSibs = int.Parse(Console.ReadLine());
