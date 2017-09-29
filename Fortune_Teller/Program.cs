@@ -22,6 +22,7 @@ namespace Fortune_Teller
             string favoriteColor;
             int numSibs;
 
+
             Console.WriteLine("I'm a fortune teller, of sorts.");
             Console.WriteLine("What's your first name?");
             firstName = Console.ReadLine().Trim();
