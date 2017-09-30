@@ -74,7 +74,7 @@ namespace Fortune_Teller
                 Console.WriteLine("No one likes a quitter...");
                 Environment.Exit(0);
             }
-            if (favoriteColor == "help")
+            else if (favoriteColor == "help")
             {
                 //ROYGBIV Help Console and extra prompt
                 Console.WriteLine("R = Red");
@@ -105,7 +105,6 @@ namespace Fortune_Teller
                 iNumSibs = int.Parse(numSibs);
             }
 
-
             //Years to retirement assignment
             int yearsToRetire;
             if (iAge % 2 == 0)
@@ -114,6 +113,7 @@ namespace Fortune_Teller
             }
             else
             {
+                //highest 'int' type available, for great fun.
                 yearsToRetire = 2147483647;
             }
 
@@ -210,7 +210,7 @@ namespace Fortune_Teller
             }
 
             //Writes fortune                           
-            Console.WriteLine("{0} {1} will retire in {2} years with ${3} in the bank, \na vacation home {4} and {5}.", firstName, lastName, yearsToRetire, moneyBank, vacationHome, transit);
+            Console.WriteLine("{0} {1} will retire in {2} years with ${3} in the bank, \na vacation home {4}, and {5}.", firstName, lastName, yearsToRetire, moneyBank, vacationHome, transit);
 
 
         }
